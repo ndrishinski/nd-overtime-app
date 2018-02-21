@@ -40,6 +40,7 @@ group :development, :test do
   gem 'database_cleaner'
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
+  gem 'factory_girl_rails', '~> 4.9'
 end
 
 group :development do
