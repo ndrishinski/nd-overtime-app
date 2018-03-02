@@ -21,12 +21,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    authorize @post 
+    authorize @post
   end
 
   def update
     authorize @post
-
+    
     if @post.update(post_params)
       redirect_to @post, notice: 'Your post was edited successfully'
     else
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:date, :rationale, :status)
+      params.require(:post).permit(:date, :rationale, :status, :overtime_request)
     end
 
     def set_post
